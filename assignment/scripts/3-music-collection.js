@@ -19,3 +19,12 @@ console.log('Adding Helix by Amaranthe, Published 2018 to collection:', addToCol
 console.log('Adding Abyss by Unleash the Archers, Published 2020 to collection:', addToCollection( 'Abyss', 'Unlease The Archers', '2020' ) );
 
 console.log(Collection);
+
+function ShowCollection (collection){
+    console.log('There are', collection.length, 'albums in the collection.');
+    for (i=0; i<collection.length; i++){
+        //console.log(collection[i])
+        console.log(collection[i].title, 'by', collection[i].artist, 'published in', collection[i].publish)
+    }
+}
+ShowCollection(Collection);
