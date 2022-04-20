@@ -11,11 +11,11 @@ function addToCollection(Title, Artist, YearPub){
     return album
 }
 
-addToCollection( 'Eternal Blue', 'Spiritbox', '2021' );
-addToCollection( 'Verkligheten', 'Soilwork', '2019' );
-addToCollection( 'War/Peace', 'Demon Hunter', '2019' );
-addToCollection( 'Underworld', 'Symphony X', '2015' );
-addToCollection( 'Helix', 'Amaranthe', '2018' );
-addToCollection( 'Abyss', 'Unlease The Archers', '2020' );
+console.log('Adding Eternal Blue by Spiritbox, Published 2021 to collection:', addToCollection( 'Eternal Blue', 'Spiritbox', '2021' ) );
+console.log('Adding Verligheten by Soilwork, Published 2019 to collection:', addToCollection( 'Verkligheten', 'Soilwork', '2019' ) );
+console.log('Adding War/Peace by Demon Hunter, Published 2019 to collection:', addToCollection( 'War/Peace', 'Demon Hunter', '2019' ) );
+console.log('Adding Underworld by Symphony X, Published 2015 to collection:', addToCollection( 'Underworld', 'Symphony X', '2015' ) );
+console.log('Adding Helix by Amaranthe, Published 2018 to collection:', addToCollection( 'Helix', 'Amaranthe', '2018' ) );
+console.log('Adding Abyss by Unleash the Archers, Published 2020 to collection:', addToCollection( 'Abyss', 'Unlease The Archers', '2020' ) );
 
 console.log(Collection);
