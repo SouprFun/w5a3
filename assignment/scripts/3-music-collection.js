@@ -1,5 +1,6 @@
 console.log('***** Music Collection *****')
-let Collection = [];
+let collection = [];
+let a = '';
 
 function addToCollection(Title, Artist, YearPub){
     let album = {
@@ -7,7 +8,7 @@ function addToCollection(Title, Artist, YearPub){
         artist: Artist,
         publish: YearPub
     };
-    Collection.push(album) 
+    collection.push(album) 
     return album
 }
 
@@ -18,13 +19,26 @@ console.log('Adding Underworld by Symphony X, Published 2015 to collection:', ad
 console.log('Adding Helix by Amaranthe, Published 2018 to collection:', addToCollection( 'Helix', 'Amaranthe', '2018' ) );
 console.log('Adding Abyss by Unleash the Archers, Published 2020 to collection:', addToCollection( 'Abyss', 'Unlease The Archers', '2020' ) );
 
-console.log(Collection);
+console.log(collection);
 
 function ShowCollection (collection){
     console.log('There are', collection.length, 'albums in the collection.');
     for (i=0; i<collection.length; i++){
         //console.log(collection[i])
-        console.log(collection[i].title, 'by', collection[i].artist, 'published in', collection[i].publish)
+        console.log(collection[i].title, 'by', collection[i].artist, 'published in', collection[i].publish); //kind of cool you can use the objects prameters on the array that holds the object! 
     }
 }
-ShowCollection(Collection);
+ShowCollection(collection);
+
+function findArtist(){
+    let results = [];
+    for (i=0; i<collection.length; i++){
+        if ( 'Soilwork' === collection[i].Artist ){
+            results.push(collection[i].Artist); 
+            console.log('yes', results, 'is in the collection');
+        }
+    }
+    return results;
+}
+
+console.log(findArtist());
