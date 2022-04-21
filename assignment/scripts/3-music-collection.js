@@ -66,7 +66,9 @@ console.log( findArtist('Soilwork'), 'is in the collection', findArtist('Soilwor
 console.log('we are looking for :', findArtist('Macklemore'));
 
 function search(obj, array){
-    //console.log();
+    if (obj === undefined || array=== undefined){
+        return 'enter valid properties'
+    }
     //debugger;
     for(let k of array){
         //console.log(k);
@@ -79,5 +81,6 @@ function search(obj, array){
 
 console.log(search(searArt, collection));
 console.log(search(searArt2, collection));
+console.log(search());
 console.log(`  band in collection: ${search(searArt, collection) ? 'yes' : 'no'}`);
 console.log(`  band in collection: ${search(searArt2, collection) ? 'yes' : 'no'}`);
