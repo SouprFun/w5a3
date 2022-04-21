@@ -2,6 +2,15 @@ console.log('***** Music Collection *****')
 let collection = [];
 let a = '';
 
+let searArt = {
+    band: 'Ray Charles',
+    year: '1967'
+};
+let searArt2 = {
+    band: 'Amaranthe',
+    year: '2018'
+};
+
 function addToCollection(Title, Artist, YearPub){
     let album = {
         title: Title,
@@ -55,3 +64,20 @@ console.log('Adding Helsinki by Soilwork, Published 2019 to collection:', addToC
 //debugger
 console.log( findArtist('Soilwork'), 'is in the collection', findArtist('Soilwork').length, 'times' );// testing stuff, being weird
 console.log('we are looking for :', findArtist('Macklemore'));
+
+function search(obj, array){
+    //console.log();
+    //debugger;
+    for(let k of array){
+        //console.log(k);
+        if( k.artist === obj.band && k.publish === obj.year ){
+            return true;
+            }
+        }
+    return false;
+}
+
+console.log(search(searArt, collection));
+console.log(search(searArt2, collection));
+console.log(`  band in collection: ${search(searArt, collection) ? 'yes' : 'no'}`);
+console.log(`  band in collection: ${search(searArt2, collection) ? 'yes' : 'no'}`);
