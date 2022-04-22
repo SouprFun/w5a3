@@ -48,7 +48,7 @@ function findArtist(a){
         //debugger
         if ( a === collection[i].artist ){
             //console.log('in the if');
-            results.push(collection[i].artist); 
+            results.push(collection[i]); 
             //console.log('yes', results, 'is in the collection');
         }
         //console.log('inside loop');
@@ -66,7 +66,7 @@ console.log( findArtist('Soilwork'), 'is in the collection', findArtist('Soilwor
 console.log('we are looking for :', findArtist('Macklemore'));
 
 function search(obj, array){
-    if (obj === undefined || array=== undefined){
+    if (obj === undefined || array === undefined){
         return 'enter valid properties'
     }
     //debugger;
@@ -79,8 +79,26 @@ function search(obj, array){
     return false;
 }
 
+function search1(obj, array){
+    let results = []
+    if (obj === undefined || array === undefined){
+        return collection
+    }
+    for (i=0; i<collection.length; i++){
+        //debugger;
+        if( collection[i].artist === obj.band && collection[i].publish === obj.year ){
+            results.push(collection[i]);
+        }
+    }
+    return results;
+}
+
 console.log(search(searArt, collection));
 console.log(search(searArt2, collection));
 console.log(search());
 console.log(`  band in collection: ${search(searArt, collection) ? 'yes' : 'no'}`);
 console.log(`  band in collection: ${search(searArt2, collection) ? 'yes' : 'no'}`);
+
+console.log(search1(searArt, collection));
+console.log(search1(searArt2, collection));
+console.log(search1());
